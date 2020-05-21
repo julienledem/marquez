@@ -75,6 +75,16 @@ task testDataAccess(type: Test) {
   }
 }
 
+publishing {
+  publications {
+    maven(MavenPublication) {
+      groupId = 'io.github.marquezproject'
+      artifactId = 'marquez'
+      from components.java
+    }
+  }
+}
+
 mainClassName = 'marquez.MarquezApp'
 
 shadowJar {
